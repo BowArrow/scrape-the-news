@@ -1,0 +1,23 @@
+.font-indie-flower {
+    font-family: 'Indie Flower', cursive;
+}
+
+.font-sanchez {
+    position: relative;
+    font-family: 'Sanchez', serif;
+    bottom: -65%;
+}
+
+
+.slant {
+    position:absolute;
+    content: " ";
+    display:block;
+    left:-5%;
+    margin-top: -15%;
+    margin-right: 10%;
+    transform:rotate(-8deg);
+    padding-left: 5%;
+    height: 50vh;
+}
+

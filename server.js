@@ -5,8 +5,6 @@ const db = require("./models");
 const app = express();
 const mongoose = require("mongoose");
 const exphbs = require("express-handlebars");
-const axios = require("axios");
-const cheerio = require("cheerio");
 const PORT = process.env.PORT || 3000;
 
 //Configure middleware
@@ -15,8 +13,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Connect to Mongo DB
-mongoose.connect("mongodb://localhost/newsScraper", {useNewUrlParser: true});
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsScraper";
 
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 //Express
 app.engine(
     "handlebars",

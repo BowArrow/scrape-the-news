@@ -12,12 +12,12 @@ const ArticleSchema = new Schema({
         required: true
     },
     summary: {
-        type: Text,
-        required: true
-    },
-    photo: {
         type: String,
         required: true
+    },
+    image: {
+        type: String,
+        required: false
     },
     note: {
         type: Schema.Types.ObjectId,
