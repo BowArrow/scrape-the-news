@@ -9,9 +9,41 @@
             <a class="display-2 font-sanchez ml-4 pl-4 align-bottom breakout"><strong>NOTE THE NEWS</strong></a>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8" id="articles-div">
+    <div class="row animated rotateInDownRight">
+        <div class="col-md-12">
+            <a class="btn btn-primary float-right rotate-right mr-4 purple darken-4" href="/scrape">Grab the news</a>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-8 mt-4" id="articles-div">
+            <!-- Card -->
+            {{#each data}}
+            <div class="card card-cascade wider mt-2" href="/note">
+                <!-- Card image -->
+                <div class="view view-cascade gradient-card-header peach-gradient">
 
+                    <!-- Title -->
+                    <h2 class="card-header-title mb-3">{{title}}</h2>
+                    <!-- Text -->
+
+                </div>
+
+                <!-- Card content -->
+                <div class="card-body card-body-cascade text-center">
+
+                    <!-- Text -->
+                    <p class="card-text">{{summary}}</p>
+                    <!-- Link -->
+                    <a href="{{link}}" class="orange-text d-flex flex-row-reverse p-2">
+                        <h5 class="waves-effect waves-light">Read more<i class="fas fa-angle-double-right ml-2"></i>
+                        </h5>
+                    </a>
+
+                </div>
+                <!-- Card content -->
+
+            </div>
+            {{/each}}
         </div>
         <div class="col-md-4" id="notes-div">
 

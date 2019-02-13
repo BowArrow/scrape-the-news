@@ -21,3 +21,8 @@
     height: 50vh;
 }
 
+.rotate-right {
+    position: absolute;
+    transform: rotate(8deg);
+}
+
