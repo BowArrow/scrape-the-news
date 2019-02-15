@@ -12,6 +12,12 @@ module.exports = function (app) {
                 });
             })
     })
+    app.get("/remove", function (req, res) {
+        db.Article.remove({}, function(err) {
+            console.log("collection removed");
+        });
+        res.redirect("/scrape")
+    })
     app.get("/scrape", function (req, res) {
         axios.get("https://news.google.com/?hl=en-US&gl=US&ceid=US:en").then(function (response) {
             const $ = cheerio.load(response.data);
