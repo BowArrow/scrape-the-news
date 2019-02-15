@@ -14,16 +14,17 @@
             <a class="btn btn-primary float-right rotate-right mr-4 purple darken-4" id="scrape" href="/remove">Grab the news</a>
         </div>
     </div>
-    <div class="row mt-4">
+    <div class="row mt-4 font-sanchez">
         <div class="col-md-8 mt-4" id="articles-div">
             <!-- Card -->
             {{#each data}}
+            <a data-id={{_id}}>
             <div class="card card-cascade wider mt-2" href="/note">
                 <!-- Card image -->
-                <div class="view view-cascade gradient-card-header peach-gradient">
+                <div class="view view-cascade gradient-card-header purple-gradient">
 
                     <!-- Title -->
-                    <h2 class="card-header-title mb-3">{{title}}</h2>
+                    <h2 class="card-header-title ml-3 my-3">{{title}}</h2>
                     <!-- Text -->
 
                 </div>
@@ -34,18 +35,19 @@
                     <!-- Text -->
                     <p class="card-text">{{summary}}</p>
                     <!-- Link -->
-                    <a href="{{link}}" class="orange-text d-flex flex-row-reverse p-2">
+                    <a href="{{link}}" class="purple-text d-flex flex-row-reverse p-2">
                         <h5 class="waves-effect waves-light">Read more<i class="fas fa-angle-double-right ml-2"></i>
                         </h5>
                     </a>
 
                 </div>
                 <!-- Card content -->
-
             </div>
+            </a>
             {{/each}}
+
         </div>
-        <div class="col-md-4" id="notes-div">
+        <div class="col-md-4 font-indie-flower" id="notes">
 
         </div>
     </div>
